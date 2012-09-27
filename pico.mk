@@ -188,7 +188,6 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
-    vendor/htc/pico/proprietary/lib/libqc-opt.so:system/lib/libqc-opt.so \
     
 # Don't work on 4.0.4 because from 2.3.5! You need to compile it with yourself
 PRODUCT_COPY_FILES += \
