@@ -125,10 +125,6 @@ PRODUCT_COPY_FILES += \
     VisualizationWallpapers \
     librs_jni
 
-# Releasetools
-PRODUCT_COPY_FILES += \
-     device/htc/pico/releasetools/extras.sh:system/bin/extras.sh
-
 # Vold 
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/etc/vold.fstab:system/etc/vold.fstab 
