@@ -66,7 +66,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pico/include
 
 # OpenGL drivers config file path
-BOARD_EGL_CFG := device/htc/pico/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := vendor/htc/pico/proprietary/lib/egl/egl.cfg
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_LIBS := true
@@ -117,6 +117,7 @@ TARGET_QCOM_HDMI_OUT := false
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # RIL
+BOARD_PROVIDES_LIBRIL := true
 BOARD_USE_NEW_LIBRIL_HTC := true
 
 # Add h/w acceleration in browser :)
