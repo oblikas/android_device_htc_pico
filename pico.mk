@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Superuser \
+    SwagPapers \
     com.android.future.usb.accessory
 
 ## Hardware properties 
