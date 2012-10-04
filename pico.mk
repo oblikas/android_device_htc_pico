@@ -134,6 +134,10 @@ PRODUCT_COPY_FILES += \
 # Prebuilt Binaries
 # Don't work on 4.0.4 because from 2.3.5! And we don't need this !
 
+# APNs for 3G network access
+PRODUCT_COPY_FILES += \
+    device/htc/pico/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Prebuilt Modules
 PRODUCT_COPY_FILES += \
     device/htc/pico/prebuilt/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
