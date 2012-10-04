@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     
 # Misc
 PRODUCT_PACKAGES += \
+    Superuser \
     com.android.future.usb.accessory
 
 ## Hardware properties 
