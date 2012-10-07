@@ -138,13 +138,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/etc/vold.fstab:system/etc/vold.fstab 
 
-# Prebuilt Binaries
-# Don't work on 4.0.4 because from 2.3.5! And we don't need this !
-
-# APNs for 3G network access
-PRODUCT_COPY_FILES += \
-    device/htc/pico/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
-
 # Prebuilt Modules
 PRODUCT_COPY_FILES += \
     device/htc/pico/prebuilt/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
@@ -193,8 +186,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/htc/pico/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     vendor/htc/pico/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so 
-    
-    
+
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
@@ -247,7 +239,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
-
 PRODUCT_NAME := aokp_pico
 PRODUCT_DEVICE := pico
 PRODUCT_MODEL := HTC Explorer A310e
