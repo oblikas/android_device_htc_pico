@@ -242,7 +242,7 @@ PRODUCT_COPY_FILES += \
     
 # Don't work on 4.0.4 because from 2.3.5! You need to compile it with yourself
 PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/etc/apns.conf:system/etc \
+    vendor/htc/pico/proprietary/etc/apns-conf.xml:system/etc \
     vendor/htc/pico/proprietary/etc/gps.conf:system/etc \
     vendor/htc/pico/proprietary/etc/spn-conf.xml:system/etc 
 
