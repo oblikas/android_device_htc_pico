@@ -244,7 +244,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/etc/apns-conf.xml:system/etc \
     vendor/htc/pico/proprietary/etc/gps.conf:system/etc \
-    vendor/htc/pico/proprietary/etc/spn-conf.xml:system/etc 
+    vendor/htc/pico/proprietary/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    vendor/htc/pico/proprietary/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
