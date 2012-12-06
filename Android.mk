@@ -13,8 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-	$(LOCAL_PATH)/libaudio/Android.mk \
-	$(LOCAL_PATH)/libril/Android.mk \
 
-include $(subdir_makefiles)
+ifeq ($(TARGET_DEVICE),pico)
+include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
