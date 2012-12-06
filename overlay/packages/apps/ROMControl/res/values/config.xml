@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="has_notification_led">false</bool>
-
-    <bool name="has_torch">false</bool>
-</resources>
