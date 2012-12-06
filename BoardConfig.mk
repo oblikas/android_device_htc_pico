@@ -20,7 +20,6 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS   += -DQCOM_HARDWARE -DREFRESH_RATE=65 -DQCOM_NO_SECURE_PLAYBACK -DQCOM_ICS_DECODERS
 
 # Arch related defines
-TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := msm7x27a
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
@@ -29,6 +28,8 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
+# Yes we do,but let's hash it out
+TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -56,10 +57,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000     #system doesnt fit anymore in 
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09600000
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-# Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/htc/pico
-TARGET_KERNEL_CONFIG := htc_pico_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+# Prebuilt kernel
+TARGET_PREBUILT_KERNEL := device/htc/pico/prebuilt/kernel
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 24
@@ -100,9 +99,12 @@ WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/firmware/fw_bcm43
 WIFI_BAND                        := 802_11_ABG
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
+# Misc
+TARGET_BOOTANIMATION_PRELOAD := true
+
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/pico/releasetools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/htc/pico/releasetools/ota_from_target_files
+#TARGET_RELEASETOOLS_EXTENSIONS := device/htc/pico/releasetools
+#TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/htc/pico/releasetools/ota_from_target_files
 
 # GPS
 BOARD_USES_QCOM_GPS := true
@@ -169,3 +171,7 @@ DYNAMIC_SHARED_LIBV8SO := true
 
 # Touch screen compatibility for JB
 BOARD_USE_LEGACY_TOUCHSCREEN := true
+
+# Release name and versioning
+PRODUCT_RELEASE_NAME := Explorer
+PRODUCT_VERSION_DEVICE_SPECIFIC :=
